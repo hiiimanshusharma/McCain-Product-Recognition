@@ -1,6 +1,6 @@
 # load config
 import json
-with open(r"C:\Users\91830\Downloads\roboflow_config.json") as f:
+with open(r"roboflow_config.json") as f:
     config = json.load(f)
 
     ROBOFLOW_API_KEY = config["ROBOFLOW_API_KEY"]
@@ -28,7 +28,7 @@ upload_url = "".join([
 ])
 
 # Get webcam interface via opencv-python
-video = cv2.VideoCapture(1)
+video = cv2.VideoCapture(0)
 
 # Infer via the Roboflow Infer API and return the result
 def infer():
